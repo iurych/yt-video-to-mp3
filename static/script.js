@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const statusDiv = document.getElementById('status');
       const downloadLinkDiv = document.getElementById('download-link');
 
-      statusDiv.textContent = 'Processing...';
+      statusDiv.innerHTML = 'Processing... <span class="spinner"></span>';
       downloadLinkDiv.innerHTML = '';
-
+    //TODO block the button while convertion is running
       try {
           const response = await fetch('/download', {
               method: 'POST',
